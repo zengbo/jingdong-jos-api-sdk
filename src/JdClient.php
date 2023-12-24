@@ -87,14 +87,32 @@ class JdClient
         return $this->config['appKey'];
     }
 
+    public function setAppKey(string $app_key): self
+    {
+        $this->config['appKey'] = $app_key;
+        return $this;
+    }
+
     public function getAppSecret(): string
     {
         return $this->config['appSecret'];
     }
 
+    public function setAppSecret(string $app_secret): self
+    {
+        $this->config['appSecret'] = $app_secret;
+        return $this;
+    }
+
     public function getRedirectUrl(): string
     {
         return $this->config['redirectUrl'];
+    }
+
+    public function setRedirectUrl(string $redirect_url): self
+    {
+        $this->config['redirectUrl'] = $redirect_url;
+        return $this;
     }
 
     public function getIsvSource(): ?string
