@@ -13,4 +13,9 @@ class MiniappMixUserInfoRequest extends AbstractRequest
     {
         $this->apiParas['code'] = $code;
     }
+
+    public function isRequireAccessToken(): bool
+    {
+        return false;
+    }
 }
