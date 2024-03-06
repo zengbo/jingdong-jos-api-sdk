@@ -1,5 +1,6 @@
 <?php
-use ACES\Request\AbstractRequest;
+
+namespace ACES\Request;
 
 class SkuReadFindSkuByIdRequest extends AbstractRequest
 {
