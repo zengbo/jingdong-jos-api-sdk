@@ -208,7 +208,7 @@ class JDToken
     {
         try {
             $result = $this->jdClient->curl($this->getRefreshAccessTokenUrl());
-            $json = json_decode($result);
+            $json = json_decode($result, true);
             if (json_last_error()) {
                 throw new JingdongException('jingdong error: json 格式化异常，' . json_last_error_msg(), ['response' => $result]);
             }
