@@ -6,12 +6,12 @@ trait HttpOptionsTrait
 {
     protected array $option = [];
 
-    public function option($option, $value)
+    public function option($option, $value): void
     {
         $this->option[$option] = $value;
     }
 
-    public function getOption($option)
+    public function getOption($option): mixed
     {
         return $this->option[$option] ?? null;
     }

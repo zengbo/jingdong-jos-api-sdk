@@ -112,7 +112,7 @@ class JDToken
     /**
      * @return CacheInterface
      */
-    public function getDefaultCache()
+    public function getDefaultCache(): CacheInterface
     {
         return new Psr16Cache(new FilesystemAdapter('jingdong', 3600));
     }
@@ -125,7 +125,7 @@ class JDToken
     /**
      * @return CacheInterface
      */
-    public function getCache()
+    public function getCache(): CacheInterface
     {
         if (null !== $this->cache) {
             return $this->cache;
@@ -204,7 +204,7 @@ class JDToken
      *
      * @return array{access_token:string, expires_in:int, refresh_token:string, time:int}
      */
-    protected function getRefreshAccessToken()
+    protected function getRefreshAccessToken(): array
     {
         try {
             $result = $this->jdClient->curl($this->getRefreshAccessTokenUrl());
