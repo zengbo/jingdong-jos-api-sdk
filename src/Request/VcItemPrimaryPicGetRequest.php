@@ -14,6 +14,6 @@ class VcItemPrimaryPicGetRequest extends AbstractRequest
     }
 
     public function setWareId(string $wareId) {
-        $this->apiParas['wareId'] = $wareId;
+        $this->apiParas['ware_id'] = $wareId;
     }
 }
